@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- 定义文档编码为"utf-8"-->
+        <meta charset="utf-8">
+        <!-- 定义标题-->
+        <title>画板</title>
+        <link rel="stylesheet" href="css/layout.css">
+    </head>
+
+    <body>
+            <!-- 定义一个节，节中包含标题-->
+            <div class="toolBar">
+                <img id="menuImage" src="img/menu.png">
+                <!-- <p>菜单</p> -->
+                <img class="functionButton" src="img/画笔.png" onclick="paintingBrush()">
+                <img src="img/eraser.png" onclick="eraser()">
+                <img id="colorSelectBtn" src="img/color.png" onclick="color1()">
+                <input id="colorSelect" type="color">
+            </div>
+            <!-- 定义一个节，节中包含一个画板-->
+            <div>
+                <canvas id="myCanvas" class="myCanvas" width="1350" height="1000"></canvas>
+                <canvas id="myCanvasShow" width="1350" height="1000"></canvas>
+            </div>
+
+            <div id="weiyi">
+                <div >
+                    
+                    <div>
+                        <p>画笔颜色</p>
+                        <select id="strokeColor" onchange="colorChange()">
+                        <option value="black">black</option>
+                        <option value="white">white</option>
+                        <option value="yellow">yellow</option>
+                        <option value="red">red</option>
+                        <option value="green">green</option>
+                        </select>
+                    </div>
+                    
+                        <div class="range-wrap">
+                            <input type="range" id="range" min="1" max="30" value="5" title="调整笔刷粗细"></div>
+
+                    <div>
+                        <p>画笔粗细</p>
+                        <!-- <select id="strokeWidth" onchange="strokeWidthChange()"> -->
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                        <option value="6">6</option>
+                        <option value="8">8</option>
+                        </select>
+                    </div>       
+                </div>
+            
+                <div>
+                    <button  onclick="eraser()">黑板擦</button>
+                    <div>
+                        <p>黑板擦大小</p>
+                        <select id="eraser" onchange="eraserWidth()">
+                        <option value="20">2</option>
+                        <option value="30">3</option>
+                        <option value="50">5</option>
+                        <option value="60">6</option>
+                        </select>
+                    </div>
+                    <button id="eraserArea" onclick="cleanArea()">区域擦除</button>
+                    <button id="clearAll" onclick="clearAll()">清除画布</button>
+                    <button id="cancel" onclick="cancel()">撤销</button>
+                    <button id="save" onclick="downloadCanvasImage()">保存</button>
+                </div>
+
+                <div>
+                    <p>形状</p>
+                    <button onclick="drawStraightLine()">直线</button>
+                    <button onclick="drawCircular()">圆形</button>
+                    <button >三角形</button>
+                    <button onclick="drawRectangle()">矩形</button>
+                    <button>五边形</button>
+                </div>
+
+            </div>
+    </body>
+    <script src="js/main.js"></script>
+</html>

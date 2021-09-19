@@ -1,0 +1,72 @@
+.toolBar {
+    width: 1900px;
+    height: 80px;
+    margin: auto;
+    background-color: #2F4F4F;
+}
+
+.toolBar img {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+#colorSelectBtn {
+    width: 50px;
+    height: 50px;
+}
+
+#colorSelect {
+  visibility: hidden;
+}
+
+
+img:hover {transform: scale(1.5);}
+img:active {background-color: pink;}
+
+
+
+
+
+
+
+
+
+
+h1 {
+    background-color: lightblue;
+    font-family: verdana;
+    color: white;
+    text-align: center;
+}
+
+#myCanvas  {
+    position: absolute;
+    right: 5px;
+    border: 1px solid #c3c3c3;
+    background-color:slategray;
+    float: right;
+}
+
+#myCanvasShow {
+    position: absolute;
+    right: 5px;
+    border: 1px solid #c3c3c3;
+    background: transparent;
+    display: none;
+}
+
+/* .functionButton {
+    
+    font-size: 35px;
+    text-align: center;
+} */
+
+#weiyi {
+    position: absolute;
+    left: 8px;
+    width: 530px;
+    height: 1000px;
+    background-color: lightslategrey;
+}
